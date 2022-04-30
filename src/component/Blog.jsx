@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function Blog() {
-  const [blog, setBlog] = useState(null);
+  const [blog, setBlog] = useState([]);
 
   useEffect(() => {
     fetch("https://alibaraka.pythonanywhere.com/api/products/")
@@ -28,7 +28,7 @@ function Blog() {
           scgsc uwsn dcsbn
         </h3>
       </div>
-      {blog.map((item) => {
+      {blog?.map((item) => {
         return (
           <div key={item.id}>
             <h2>{item.name}</h2>
