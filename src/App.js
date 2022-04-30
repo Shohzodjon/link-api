@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import Test from "./Test";
 function App() {
   const [blog, setBlog] = useState(null);
 
@@ -25,6 +26,7 @@ function App() {
           </div>
         );
       })}
+      <Test />
     </div>
   );
 }
