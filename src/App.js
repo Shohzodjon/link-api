@@ -1,4 +1,5 @@
 import "./App.css";
+import Blog from "./component/Blog";
 // import { useState, useEffect } from "react";
 import Test from "./Test";
 function App() {
@@ -28,6 +29,7 @@ function App() {
       })} */}
       <h2>App component </h2>
       <Test />
+      <Blog />
     </div>
   );
 }
