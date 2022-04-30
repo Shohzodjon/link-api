@@ -1,40 +1,40 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
-function Blog() {
-  const [blog, setBlog] = useState([]);
+function Story() {
+  const [story, setStory] = useState([]);
 
   useEffect(() => {
-    fetch("https://alibaraka.pythonanywhere.com/api/products/")
+    fetch("https://alibaraka.pythonanywhere.com/api/stories/")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
-        setBlog(data);
+        setStory(data);
       });
   }, []);
   return (
-    <div className="blog">
+    <section className="story">
       <div className="container">
-        <div className="blog_grid">
-          {blog?.map((item) => {
+        <h1>Story</h1>
+
+        <div className="story_grid">
+          {story?.map((item) => {
             return (
-              <div key={item.id} className="item">
+              <div className="story_item" key={item.id}>
                 <div className="d_flex">
                   <h2>{item.name}</h2>
                   <p>{item.text}</p>
                 </div>
-
-                <div className="item_img">
-                  <img src={item.image} alt="img" />
+                <div className="story_img">
+                  <img src={item.image} alt="story" />
                 </div>
               </div>
             );
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default Blog;
+export default Story;

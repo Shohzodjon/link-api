@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+.d_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+.f_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
